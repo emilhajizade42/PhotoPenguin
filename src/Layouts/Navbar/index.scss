@@ -1,0 +1,71 @@
+@import '../../Assets/sass/index.scss';
+nav {
+  position: fixed;
+  box-shadow: black 0px 25px 20px -20px;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 12px;
+  font-size: 24px;
+  text-align: center;
+  background-color: $color-primary-contrast;
+  background-color: $color-primary;
+  color: $color-primary-contrast;
+  height: 72px;
+  width: 100vw;
+  @include flexContainer(row, space-between, center);
+}
+.nav_holder {
+  height: 72px;
+  width: 100%;
+}
+.navbar_logo {
+  position: relative;
+  bottom: 0;
+  height: 72px;
+  color: $color-primary-contrast;
+  font-size: 24px;
+  @include flexContainer(row, flex-start, center);
+  i {
+    display: none;
+  }
+}
+.navbar_search {
+  width: 50%;
+}
+.navbar_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 0 12px;
+  &_upload {
+    cursor: pointer;
+    i {
+      margin-right: 12px;
+    }
+  }
+  &_profile {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar_logo {
+    i {
+      cursor: pointer;
+      margin-right: 12px;
+      display: block;
+    }
+  }
+  .navbar_box {
+    &_upload {
+      span {
+        display: none;
+      }
+    }
+    &_profile {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../../Assets/sass/index.scss';
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+.home-favorite {
+  padding: 16px 32px;
+  background-color: $color-text-secondary;
+  width: 100%;
+  @include flexContainer(row, space-between, center);
+  a {
+    font-weight: bold;
+    font-size: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem);
+    line-height: clamp(1.875rem, 0.3036rem + 3.2738vw, 3.25rem);
+    width: 100%;
+    max-width: 400px;
+  }
+  .swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    img {
+      border: 5px solid #f8f8f8;
+      display: block;
+      width: clamp(12.5rem, 2.487rem + 20.8605vw, 22.5rem);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #999;
+      top: -10px;
+      left: 50%;
+      z-index: 0;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: -14px;
+      left: 52%;
+      z-index: 5;
+      border-radius: 50% 50%;
+      background: #000;
+    }
+  }
+}

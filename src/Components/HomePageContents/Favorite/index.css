@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+a:hover,
+ul:hover,
+ol:hover,
+li:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+.home-favorite {
+  padding: 16px 32px;
+  background-color: #eeeeee;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-favorite a {
+  font-weight: bold;
+  font-size: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem);
+  line-height: clamp(1.875rem, 0.3036rem + 3.2738vw, 3.25rem);
+  width: 100%;
+  max-width: 400px;
+}
+.home-favorite .swing {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.home-favorite .swing img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: clamp(12.5rem, 2.487rem + 20.8605vw, 22.5rem);
+}
+.home-favorite .swing::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+.home-favorite .swing::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 52%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}

@@ -1,0 +1,62 @@
+@import '../../../Assets/sass/index.scss';
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  7.5% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(-30deg);
+  }
+  22.5% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  37.5% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(30deg);
+  }
+  62.5% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  77.5% {
+    transform: rotate(-10deg);
+  }
+  85% {
+    transform: rotate(-30deg);
+  }
+  92.5% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.home-camera {
+  padding: 16px 32px;
+  background-color: white;
+  width: 100%;
+  @include flexContainer(row, space-between, center);
+  a {
+    font-weight: bold;
+    font-size: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem);
+    line-height: clamp(1.875rem, 0.3036rem + 3.2738vw, 3.25rem);
+    width: 100%;
+    max-width: 400px;
+  }
+  img {
+    width: clamp(10rem, -5.0196rem + 31.2907vw, 25rem);
+    animation: 3s linear 0.1s shake;
+    animation-iteration-count: infinite;
+    margin: 0 48px;
+  }
+}

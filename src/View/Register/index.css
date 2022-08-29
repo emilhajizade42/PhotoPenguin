@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+a:hover,
+ul:hover,
+ol:hover,
+li:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.container__register {
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../Assets/Images/photo_bg.jpg");
+}
+.container__register > div {
+  margin-left: clamp(0rem, -2.5033rem + 5.2151vw, 2.5rem);
+  width: 100%;
+  max-width: clamp(20rem, 8.485rem + 23.9896vw, 31.5rem);
+  min-width: 280px;
+}
+.container__register > div:first-child {
+  position: relative;
+  width: 100%;
+}
+.container__register > div:first-child .active-register {
+  transition: all 800ms;
+  position: relative;
+  bottom: -82px;
+  left: 12px;
+}
+.container__register > div:first-child a {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: all 800ms;
+  position: absolute;
+  left: 12px;
+  bottom: 0;
+  z-index: 0;
+  text-align: center;
+  background-color: #161616;
+  color: #f1d4d4;
+  width: clamp(5rem, -0.0065rem + 10.4302vw, 10rem);
+  height: clamp(2.5rem, 1.4987rem + 2.086vw, 3.5rem);
+  padding: clamp(0.5rem, -0.0007rem + 1.043vw, 1rem);
+  font-size: clamp(1.375rem, 0.8743rem + 1.043vw, 1.875rem);
+  font-weight: bold;
+}
+.container__register > div:first-child a:hover {
+  color: #6a097d;
+}
+.container__register > div:last-child {
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: clamp(1.5rem, 0.4987rem + 2.086vw, 2.5rem);
+  background-color: #161616;
+  height: max-content;
+  padding: 24px;
+}

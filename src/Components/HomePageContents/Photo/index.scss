@@ -1,0 +1,70 @@
+@import '../../../Assets/sass/index.scss';
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: clamp(25rem, 12.4837rem + 26.0756vw, 37.5rem);
+  @include flexContainer(column, center, start);
+  filter: grayscale(80%);
+
+  .intro {
+    position: absolute;
+    left: 32px;
+    width: 100%;
+    max-width: clamp(20rem, 4.9804rem + 31.2907vw, 35rem);
+    color: $color-text-primary;
+    h1 {
+      font-size: clamp(1.5rem, -0.002rem + 3.1291vw, 3rem);
+      font-weight: bold;
+    }
+    p {
+      word-wrap: break-word;
+      font-size: clamp(0.9375rem, 0.7498rem + 0.3911vw, 1.125rem);
+      line-height: 24px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    button{
+      height: 48px;
+      width: 170px;
+      margin: 16px 0;
+      border-radius: 6px;
+      background-color: black;
+      color: $color-primary-contrast;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 300ms;
+      &:hover{
+        font-size: 18px;
+        color: #000;
+        font-weight: bold;
+        background-color: rgba($color-primary-contrast, 0.8);
+      }
+
+    }
+  }
+  .distortion {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width:350px) {
+  .landing {
+    .intro {
+      width: auto;
+    }
+  }
+
+}

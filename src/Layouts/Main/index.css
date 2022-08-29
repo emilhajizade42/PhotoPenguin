@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+a:hover,
+ul:hover,
+ol:hover,
+li:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+section {
+  background-color: #fafbfd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+}
+section .mainBox {
+  width: calc(100% - 256px);
+  padding: 8px 0 8px 8px;
+}
+section .mainBlocker {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: 100vh;
+  width: 0vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  section .mainBox {
+    width: auto;
+  }
+  section .mainBlocker {
+    width: 100vw;
+    transition: 1s all;
+  }
+}

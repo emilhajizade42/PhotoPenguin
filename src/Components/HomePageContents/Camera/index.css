@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+a:hover,
+ul:hover,
+ol:hover,
+li:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  7.5% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(-30deg);
+  }
+  22.5% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  37.5% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(30deg);
+  }
+  62.5% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  77.5% {
+    transform: rotate(-10deg);
+  }
+  85% {
+    transform: rotate(-30deg);
+  }
+  92.5% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.home-camera {
+  padding: 16px 32px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-camera a {
+  font-weight: bold;
+  font-size: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem);
+  line-height: clamp(1.875rem, 0.3036rem + 3.2738vw, 3.25rem);
+  width: 100%;
+  max-width: 400px;
+}
+.home-camera img {
+  width: clamp(10rem, -5.0196rem + 31.2907vw, 25rem);
+  animation: 3s linear 0.1s shake;
+  animation-iteration-count: infinite;
+  margin: 0 48px;
+}

@@ -1,0 +1,81 @@
+@import '../../Assets/sass/index.scss';
+
+.sidebar {
+  position: fixed;
+  z-index: 3;
+  width: 256px;
+  top: 64px;
+  left: 0;
+  height: calc(100vh - 64px);
+  padding: 40px 12px;
+  background-color: $color-primary;
+  box-shadow: rgba(0, 0, 0, 0.7) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  ul {
+    width: 100%;
+    display: grid;
+    place-items: start;
+    padding: 0 12px;
+    gap: 25px;
+    font-size: 20px;
+    a {
+      display: flex;
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-light 50%,
+        $color-primary-contrast 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      padding: 5px 0;
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:before {
+        content: '';
+        background: $color-primary-light;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        background-position: 0;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+      i {
+        margin-right: 12px;
+        color: #3c4043;
+        width: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    &_visible {
+      overflow: hidden;
+      width: 256px;
+      transition: 500ms all;
+    }
+    &_none {
+      overflow: hidden;
+      width: 0px;
+      transition: 500ms all;
+      padding: 0;
+    }
+  }
+}

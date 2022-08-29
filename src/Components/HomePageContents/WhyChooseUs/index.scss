@@ -1,0 +1,46 @@
+@import '../../../Assets/sass/index.scss';
+
+.home-choose {
+  padding: 24px;
+  width: 100%;
+  @include flexWithGap(
+    column,
+    clamp(3rem, 1.2857rem + 3.5714vw, 4.5rem),
+    center
+  );
+  h2 {
+    font-weight: bold;
+    font-size: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem);
+    line-height: clamp(1.875rem, 0.3036rem + 3.2738vw, 3.25rem);
+    text-align: center;
+  }
+  ul {
+    width: 100%;
+    @include flexWithGap(
+      row,
+      clamp(3rem, 1.2857rem + 3.5714vw, 4.5rem),
+      center
+    );
+    justify-content: center;
+    li {
+      min-width: 120px;
+      @include flexWithGap(
+        column,
+        clamp(0.625rem, 0.1964rem + 0.8929vw, 1rem),
+        center
+      );
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+        @include flexContainer(row, center, center);
+      }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: clamp(1.25rem, 0.9643rem + 0.5952vw, 1.5rem);
+        color: $color-text-primary;
+      }
+    }
+  }
+}

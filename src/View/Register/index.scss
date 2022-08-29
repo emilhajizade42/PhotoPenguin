@@ -1,0 +1,54 @@
+@import '../../Assets/sass/index.scss';
+
+.container__register {
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+  @include flexContainer(column, center, center);
+  @include backgroundImage('../../Assets/Images/photo_bg.jpg');
+  & > div {
+    margin-left: clamp(0rem, -2.5033rem + 5.2151vw, 2.5rem);
+    width: 100%;
+    max-width: clamp(20rem, 8.485rem + 23.9896vw, 31.5rem);
+    min-width: 280px;
+    &:first-child {
+      position: relative;
+      width: 100%;
+      .active-register {
+        transition: all 800ms;
+        position: relative;
+        bottom: -82px;
+        left: 12px;
+      }
+      a {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        transition: all 800ms;
+        position: absolute;
+        left: 12px;
+        bottom: 0;
+        z-index: 0;
+        text-align: center;
+        background-color: $color-primary;
+        color: $color-primary-contrast;
+        width: clamp(5rem, -0.0065rem + 10.4302vw, 10rem);
+        height: clamp(2.5rem, 1.4987rem + 2.086vw, 3.5rem);
+        padding: clamp(0.5rem, -0.0007rem + 1.043vw, 1rem);
+        font-size: clamp(1.375rem, 0.8743rem + 1.043vw, 1.875rem);
+        font-weight: bold;
+        &:hover {
+          color: $color-primary-light;
+        }
+      }
+    }
+    &:last-child {
+      border-radius: 16px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: clamp(1.5rem, 0.4987rem + 2.086vw, 2.5rem);
+      background-color: $color-primary;
+      height: max-content;
+      padding: 24px;
+    }
+  }
+}

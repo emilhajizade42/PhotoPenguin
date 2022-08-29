@@ -1,0 +1,71 @@
+@import '../../../Assets/sass/index.scss';
+
+.container_palaroid {
+  width: max-content;
+  height: calc(64% + 120px);
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.8) 6px 2px 16px 0px,
+    rgba(0, 0, 0, 0.6) -6px -2px 16px 0px;
+  padding: 16px;
+  top: 13%;
+  z-index: 5;
+  position: fixed;
+
+  & > div {
+    width: 100%;
+    height: 120px;
+    @include flexContainer(row, center, center);
+    div {
+      @include flexWithGap(row, 12px, center);
+      i {
+        font-size: 32px;
+        color: $color-text-primary;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          opacity: 1;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  figure {
+    height: calc(100% - 120px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  span {
+    @include flexContainer(row, center, center);
+    position: absolute;
+    top: 0;
+    left: -56px;
+    transform: rotate(135deg);
+    width: 160px;
+    height: 48px;
+    background-color: #cecabc;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container_palaroid {
+    width: calc(100% - 88px);
+
+    figure {
+      width: 100%;
+      height: calc(100% - 120px);
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}

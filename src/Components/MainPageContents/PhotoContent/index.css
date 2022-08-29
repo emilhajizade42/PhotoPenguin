@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+a:hover,
+ul:hover,
+ol:hover,
+li:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 41%;
+  }
+  100% {
+    background-position: 0% 60%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 41%;
+  }
+  100% {
+    background-position: 0% 60%;
+  }
+}
+.photo_content {
+  background: linear-gradient(234deg, #c060a1, #f1d4d4, #4f3b78, #c996cc, #864879, #d6c5f0, #6a097d, #c4bbf0, #800080, #eabfff, #3c005a, #d580ff);
+  background-size: 2400% 2400%;
+  -webkit-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.photo_content > div {
+  width: calc(33% - 4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.photo_content > div:nth-child(even) {
+  flex-direction: column-reverse;
+}
+.photo_content > div figure {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.photo_content > div figure:nth-child(2) {
+  aspect-ratio: 1/2;
+}
+.photo_content > div figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  transition: all 0.5s;
+}
+.photo_content > div figure > img:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(1.3);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .photo_content {
+    margin-left: 0;
+  }
+  .photo_content > div {
+    width: calc(50% - 4px);
+  }
+}

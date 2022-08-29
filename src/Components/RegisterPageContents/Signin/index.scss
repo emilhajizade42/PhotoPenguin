@@ -1,0 +1,5 @@
+@import '../../../Assets/sass/index.scss';
+
+.register__login {
+  @include flexWithGap(column, 16px, center);
+}

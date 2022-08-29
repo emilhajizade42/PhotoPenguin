@@ -1,0 +1,20 @@
+@mixin flexContainer($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin flexWithGap($direction, $gap, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  gap: $gap;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@mixin backgroundImage($url) {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url($url);
+}
