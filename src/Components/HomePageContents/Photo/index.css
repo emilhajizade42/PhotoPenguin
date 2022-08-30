@@ -85,11 +85,17 @@ button {
   cursor: pointer;
   transition: 300ms;
 }
+.landing .intro button a {
+  color: #f1d4d4;
+  font-size: 16px;
+}
 .landing .intro button:hover {
-  font-size: 18px;
-  color: #000;
-  font-weight: bold;
   background-color: rgba(241, 212, 212, 0.8);
+}
+.landing .intro button:hover a {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
 }
 .landing .distortion {
   display: inline-block;

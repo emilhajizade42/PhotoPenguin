@@ -32,13 +32,19 @@
       background-color: black;
       color: $color-primary-contrast;
       font-size: 16px;
+      a{
+      color: $color-primary-contrast;
+      font-size: 16px;
+      }
       cursor: pointer;
       transition: 300ms;
       &:hover{
-        font-size: 18px;
-        color: #000;
-        font-weight: bold;
         background-color: rgba($color-primary-contrast, 0.8);
+        a{
+          color: #000;
+          font-size: 18px;
+          font-weight: bold;
+          }
       }
 
     }

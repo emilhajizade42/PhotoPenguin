@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { penguin1, penguin2, blur } from '../../../Assets/Images/index'
 import hoverEffect from 'hover-effect'
 import './index.css'
+import { Link } from 'react-router-dom'
 
 export default function Photo() {
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function Photo() {
           görməyə imkan verir, onlara ov etməyə və yırtıcılardan qaçmağa kömək
           edir.
         </p>
-        <button>Fotolara keç</button>
+        <button><Link to="/photos">Fotolara keç</Link></button>
       </article>
       <div className="distortion"></div>
     </section>
